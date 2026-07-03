@@ -29,6 +29,18 @@ Any monochrome-friendly art works best. Keep it:
 | Frames | 4–16 | Flash + smoothness sweet spot |
 | Frame rate | 4–10 fps | Above ~10 fps the OLED bus and CPU pay for invisible smoothness |
 
+**Small 4-pin 128x32 OLEDs:** the animation widget renders in the display's
+native landscape coordinates, so on a 128x32 screen your frames must be
+**≤ 32 px tall** and **pre-rotated 90° clockwise** to stand upright when the
+keyboard is viewed with the screen in portrait (the shipped `_90` assets use
+the same trick). Also override the position defaults, which are tuned for
+taller 68x160 screens and crop small displays:
+
+```ini
+CONFIG_NICE_OLED_WIDGET_ANIMATION_PERIPHERAL_CUSTOM_X=49
+CONFIG_NICE_OLED_WIDGET_ANIMATION_PERIPHERAL_CUSTOM_Y=1
+```
+
 ### 2. Convert
 
 ```sh
