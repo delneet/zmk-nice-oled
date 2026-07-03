@@ -149,6 +149,10 @@ const lv_img_dsc_t *pokemon_imgs[] = {
     &pokemon_28, &pokemon_29, &pokemon_30, &pokemon_31, &pokemon_32, &pokemon_33, &pokemon_34,
     &pokemon_35, &pokemon_36, &pokemon_37, &pokemon_38, &pokemon_39, &pokemon_40, &pokemon_41,
     &pokemon_42, &pokemon_43, &pokemon_44, &pokemon_45, &pokemon_46, &pokemon_47};
+#elif IS_ENABLED(CONFIG_NICE_OLED_WIDGET_ANIMATION_PERIPHERAL_USER)
+// Defined by the generated assets/user_animation.c (scripts/gif2anim.py)
+extern const lv_img_dsc_t *user_anim_imgs[];
+extern const uint8_t user_anim_imgs_count;
 #else
 #endif
 #else // IS_ENABLED(CONFIG_NICE_OLED_WIDGET_ANIMATION_PERIPHERAL)
@@ -186,6 +190,8 @@ void draw_animation(lv_obj_t *canvas, struct zmk_widget_screen *widget) {
     lv_animimg_set_src(art, (const void **)spaceman_imgs, 20);
 #elif IS_ENABLED(CONFIG_NICE_OLED_WIDGET_ANIMATION_PERIPHERAL_POKEMON)
     lv_animimg_set_src(art, (const void **)pokemon_imgs, 48);
+#elif IS_ENABLED(CONFIG_NICE_OLED_WIDGET_ANIMATION_PERIPHERAL_USER)
+    lv_animimg_set_src(art, (const void **)user_anim_imgs, user_anim_imgs_count);
 #else
     lv_animimg_set_src(art, (const void **)crystal_imgs, 16);
 #endif

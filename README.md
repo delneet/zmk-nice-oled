@@ -219,6 +219,7 @@ This document lists the available configuration options for the `nice_oled` shie
 | `CONFIG_NICE_OLED_WIDGET_ANIMATION_PERIPHERAL_HEAD` | bool | `n` | Enable head animation on peripheral |
 | `CONFIG_NICE_OLED_WIDGET_ANIMATION_PERIPHERAL_POKEMON` | bool | `n` | Enable pokemon animation on peripheral |
 | `CONFIG_NICE_OLED_WIDGET_ANIMATION_PERIPHERAL_SPACEMAN` | bool | `n` | Enable spaceman animation on peripheral |
+| `CONFIG_NICE_OLED_WIDGET_ANIMATION_PERIPHERAL_USER` | bool | `n` | Enable your own animation on peripheral — see [docs/CUSTOM_ANIMATIONS.md](docs/CUSTOM_ANIMATIONS.md) |
 | `CONFIG_NICE_OLED_WIDGET_ANIMATION_PERIPHERAL_MS` | int | varies | Animation length in milliseconds |
 | `CONFIG_NICE_OLED_WIDGET_STATIC_IMAGE_PERIPHERAL_VIM` | bool | `n` | Enable static vim on peripheral |
 | `CONFIG_NICE_OLED_WIDGET_STATIC_IMAGE_PERIPHERAL_VIP_MARCOS` | bool | `n` | Enable static vim_marcos on peripheral |
